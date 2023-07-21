@@ -41,6 +41,11 @@ nginx_server_names_hash_bucket_size: "64"
 
 nginx_proxy_cache_path: ""
 
+enable_nginx_lb: false
+
+load_balancer_is_required: false
+
+
 nginx_extra_conf_options: ""
 # Example extra main options, used within the main nginx's context:
 #   nginx_extra_conf_options: |
@@ -84,7 +89,7 @@ nginx_upstreams:
   keepalive: 16 # optional
   servers:
     - "172.31.36.85 weight=3"
-    - "172.31.45 weight=3"
+    - "172.31.45.210 weight=3"
 
 
 nginx_log_format: |-
